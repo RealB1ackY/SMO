@@ -107,7 +107,7 @@ class SMO:
 
     @staticmethod
     def single_channel_SMO_with_limited_delay(m: int, T_arr: int, Tob: int) \
-            -> tuple[str, str, str, str, str, str, str]:
+            -> tuple[str, str, str, str, str, str, str, str]:
         lamb, mu = 1 / T_arr, 1 / Tob
         ro = lamb / mu
 
@@ -130,6 +130,7 @@ class SMO:
                f'Вероятность отказа: {round(P_deny * 100, 3)}%', \
                f'Относительная пропускная способность: {round(Q * 100, 3)}%', \
                f'Среднее число машин, ожидающих в очереди на заправку: {round(L_och, 3)}', \
+               f'Абсолютная пропускная способность: {round(A, 3)}', \
                f'Среднее время ожидания машины в очереди: {round(T_och, 3)} минуты'
 
     @staticmethod
@@ -154,7 +155,7 @@ class SMO:
                f'Интенсивность нагрузки канала: {round(ro, 3)}', \
                f'Вероятность простоя: {round(p0 * 100, 3)}%', \
                f'Вероятность того, что канал занят: {round(p_busy * 100, 3)}%', \
-               f'Среднее число клиетов в очереди: {round(L_och, 3)}', \
+               f'Среднее число клиентов в очереди: {round(L_och, 3)}', \
                f'Среднее время ожидания в очереди: {round(T_och, 3)}', \
                f'Среднее время пребывания: {round(T_SMO, 3)} минут', \
                f'Суммарное время обслуживания: {round(each_time, 3)} минут', \
